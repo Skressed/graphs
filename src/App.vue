@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <graph v-bind:arrays="arrays"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import graph from './components/Graph.vue'
+import mockedData from './fixtures/mockData.json'
 
 export default {
   name: 'App',
+  data () {
+    return {
+      arrays: mockedData.arrays,
+    }
+  },
   components: {
-    HelloWorld
+    'graph': graph,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+html {
+  font-family: 'Roboto', sans-serif;
 }
 </style>
