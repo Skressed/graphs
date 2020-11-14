@@ -12,7 +12,11 @@ export default {
   name: 'App',
   data () {
     return {
-      arrays: mockedData.arrays,
+      arrays: {
+        meetings: mockedData.meetings,
+        projects: mockedData.projects,
+        investments: mockedData.investments
+      },
     }
   },
   components: {
