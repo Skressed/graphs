@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <graph v-bind:arrays="arrays"/>
+    <graph v-bind:data="data"/>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
   name: 'App',
   data () {
     return {
-      arrays: {
+      data: {
         meetings: mockedData.meetings,
         projects: mockedData.projects,
         investments: mockedData.investments
