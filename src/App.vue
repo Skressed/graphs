@@ -17,7 +17,7 @@ export default {
     }
   },
   created () {
-    this.timerId = setInterval(this.setData, 5000);
+    this.timerId = setInterval(this.setData, 3000);
   },
   methods: {
     setData() {

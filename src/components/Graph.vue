@@ -95,12 +95,6 @@ export default {
   margin-left: 26px;
 }
 
-.line {
-  fill: none;
-  stroke-width: 3;
-  animation: 1s;
-}
-
 .meetingsLine {
     stroke: #ED5338;
 }
@@ -111,5 +105,10 @@ export default {
 
 .investmentsLine {
     stroke: #4E8EF8;
+}
+
+.line {
+  fill: none;
+  stroke-width: 3;
 }
 </style>
