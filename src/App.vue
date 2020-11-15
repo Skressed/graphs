@@ -12,23 +12,37 @@ export default {
   name: 'App',
   data () {
     return {
-      data: {
-        meetings: mockedData.meetings,
-        projects: mockedData.projects,
-        investments: mockedData.investments
-      },
+      timerId: 0,
+      data: mockedData[0],
+    }
+  },
+  created () {
+    this.timerId = setInterval(this.setData, 5000);
+  },
+  methods: {
+    setData() {
+      const currentIndex = mockedData.indexOf(this.data);
+      if (currentIndex === mockedData.length-1) {
+        this.data = mockedData[0];
+        return;
+      }
+      this.data = mockedData[currentIndex + 1];
     }
   },
   components: {
     'graph': graph,
+  },
+  destroyed() {
+    clearInterval(this.timerId);
   }
 }
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
 }
 </style>

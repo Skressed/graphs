@@ -10,9 +10,9 @@
       </svg>
     </div>
     <svg id="annotation" width="375" height="80">
-      <circle cx="8" cy="15" r="5" fill="#ED5338"/><text x="40" y="20">Участвует в мероприятиях</text>
-      <circle cx="8" cy="40" r="5" fill="#2EB349"/><text x="40" y="45">Участвует в проектах</text>
-      <circle cx="8" cy="65" r="5" fill="#4E8EF8"/><text x="40" y="70">Инвестирует в проектах</text>
+      <circle cx="8" cy="15" r="4" fill="#ED5338"/><text x="40" y="20" fill="#111B42">Участвует в мероприятиях</text>
+      <circle cx="8" cy="40" r="4" fill="#2EB349"/><text x="40" y="45" fill="#111B42">Участвует в проектах</text>
+      <circle cx="8" cy="65" r="4" fill="#4E8EF8"/><text x="40" y="70" fill="#111B42">Инвестирует в проектах</text>
     </svg>
   </div>
 </template>
@@ -41,7 +41,7 @@ export default {
   },
   computed: {
     rangeX() {
-      const width = this.width - this.margin;
+      const width = this.width;
       return [0, width];
     },
     rangeY() {
@@ -78,7 +78,8 @@ export default {
 
 <style>
 #graph {
-  margin: 24px;
+  margin: 25px;
+  margin-top: 21px;
   margin-bottom: 8px;
 }
 
@@ -92,12 +93,12 @@ export default {
 
 #annotation {
   margin-left: 26px;
-  margin-bottom: 12px;
 }
 
 .line {
   fill: none;
   stroke-width: 3;
+  animation: 1s;
 }
 
 .meetingsLine {
