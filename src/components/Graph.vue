@@ -76,7 +76,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #graph {
   margin: 25px;
   margin-top: 21px;
@@ -84,11 +84,13 @@ export default {
 }
 
 #card {
+  margin: 8px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 7px;
   display: inline-block;
   width: 375px;
   height: 143px;
+  background-color: #ffffff;
 }
 
 #annotation {
