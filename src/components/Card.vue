@@ -73,6 +73,7 @@ export default {
 }
 
 .section-right {
+  margin-left: 24px;
   margin-right: 52px;
 }
 

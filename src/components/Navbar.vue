@@ -18,14 +18,6 @@
 <script>
 export default {
   name: 'Navbar',
-  data () {
-    return {
-
-    }
-  },
-  components: {
-
-  },
 }
 </script>
 
@@ -103,8 +95,5 @@ p {
   color: #C4C4C4;
 }
 
-.dropdown {
-  margin-right: 64px;
-}
 
 </style>
